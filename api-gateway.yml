@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:${SERVER_PORT:8089}}
+  port: 8079
 
 spring:
   application:
@@ -13,7 +13,7 @@ spring:
         - id: api-movie
           uri: lb://api-movie
           predicates:
-            - Path=/api/v1/movie/**
+            - Path=/api/v1/movies/**
         - id: api-catalog
           uri: lb://api-catalog
           predicates:
