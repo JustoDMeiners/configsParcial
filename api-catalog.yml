@@ -3,12 +3,18 @@ server:
 spring:
   application:
     name: api-catalog
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672  
+  zipkin:
+    baseUrl: http://localhost:9411/
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/movie-dev
-    username: root
-    password: password
-
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/checkAgro-dev
+    username: usr-checkAgro
+    password: pwd-checkAgro
   jpa:
     generate-ddl: true
     hibernate:
@@ -19,9 +25,13 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL55Dialect
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
         format_sql: true
     show-sql: false
+
+info:
+  application:
+    name: api-catalog
 
 eureka:
   instance:
