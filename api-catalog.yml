@@ -12,10 +12,10 @@ spring:
     baseUrl: http://localhost:9411/  
   data:
     mongodb:
-      username: usr-inscription-mongo
-      password: pwd-inscription-mongo
+      username: usr-catalog-mongo
+      password: pwd-catalog-mongo
       database: catalog
-      port: 27025
+      port: 27026
       host: localhost
   jpa:
     hibernate.ddl-auto: update
