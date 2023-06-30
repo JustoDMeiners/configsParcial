@@ -14,7 +14,7 @@ spring:
     mongodb:
       username: usr-inscription-mongo
       password: pwd-inscription-mongo
-      database: catalog
+      database: final
       port: 27026
       host: localhost
   jpa:
